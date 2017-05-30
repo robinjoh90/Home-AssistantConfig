@@ -1,0 +1,51 @@
+car:
+  name: Car
+  view: true
+  icon: mdi:car
+  entities:
+    - group.volvooncall_warnings
+    - group.volvooncall_status
+    - group.volvooncall_dashboard
+    - group.volvooncall_switches
+livingroom:
+  name: "Living Room"
+  view: true
+  icon: mdi:sofa
+  entities:
+    - sensor.window_1_temperature
+    - group.windowlamps
+    - light.hue_iris_1
+    - light.hue_lightstrip_plus_1
+    - media_player.chromecast_vardagsrum
+    - remote.livingroom
+plants:
+  name: Plants
+  view: true
+  icon: mdi:flower
+  entities:
+    - group.flower
+kitchen:
+  name: "Kitchen"
+  view: true
+  icon: mdi:stove
+  entities:
+    - sensor.sensor.outside_temperature
+    - group.Kitchenlights
+    - sensor.livingroom_temperature
+    - light.koksbord
+    - group.speakers_kitchen
+bedroom:
+  name: "Bedroom"
+  view: true
+  icon: mdi:hotel
+  entities:
+    - light.sovrum1
+    - light.sovrum2
+    - group.speakers_bedroom
+Varmskog:
+  name: "Värmskog"
+  view: true
+  icon: mdi:pine-tree
+  entities:
+    - device_tracker.volvo_neh575
+    - zone.varmskog

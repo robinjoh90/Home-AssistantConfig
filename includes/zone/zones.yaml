@@ -1,0 +1,17 @@
+- name: Home
+  latitude: !secret home_latitude
+  longitude: !secret home_longitude
+  radius: 120
+  icon: mdi:home
+
+- name: Cabin
+  latitude: !secret cabin_latitude
+  longitude: !secret cabin_longitude
+  radius: 250
+  icon: mdi:pine-tree
+
+- name: Office-Karlstad
+  latitude: !secret work_latitude
+  longitude: !secret work_longitude
+  icon: mdi:briefcase
+  radius: 100

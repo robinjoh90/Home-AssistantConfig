@@ -1,0 +1,15 @@
+- name: Romantic
+    entities:
+      light.Sovrum1:
+        state: on
+        brightness: 18
+        xy_color: [0.6159, 0.288]
+        rgb_color: [160,35,54]
+      light.Sovrum2:
+        state: on
+        brightness: 11
+        xy_color: [0.6766,0.3195]
+        rgb_color: [103,19,0]
+      script.spotify_romance_on: on
+      media_player.spotify:
+        state: play

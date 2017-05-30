@@ -1,0 +1,110 @@
+speakers_kitchen:
+  name: "Speakers kitchen"
+  icon: mdi:speaker
+  entities:
+    - switch.relay1
+    - switch.relay2
+speakers_bathroom:
+  name: "Speakers bathroom"
+  icon: mdi:speaker
+  entities:
+    - switch.relay3
+    - switch.relay4
+speakers_bedroom:
+  name: "Speakers bedroom"
+  icon: mdi:speaker
+  entities:
+    - switch.relay5
+    - switch.relay6
+speakers:
+  name: "Speakers"
+  entities:
+    - group.speakers_kitchen
+    - group.speakers_bathroom
+    - group.speakers_bedroom
+
+windowlamps:
+  name: "Window lamps"
+  entities:
+    - switch.Windowlamp1
+    - switch.Windowlamp2
+    - switch.Windowlamp3
+lightswitches:
+  name: "Light switches"
+  entities:
+    - switch.Kitchen1
+    - switch.Kitchen2
+    - switch.Bedroom1
+    - switch.Bedroom2
+
+system_monitor:
+  name: "System info"
+  entities:
+    - sensor.system_monitor_cpu_use
+    - sensor.system_monitor_disk_use_
+    - sensor.system_monitor_last_boot
+    - sensor.system_monitor_ram_free
+    - sensor.system_monitor_received_eth0
+    - sensor.system_monitor_sent_eth0
+
+yr_weather:
+  name: "Weather yr.no"
+  entities:
+    - sensor.yr_cloudiness
+    - sensor.yr_fog
+    - sensor.yr_high_clouds
+    - sensor.yr_humidity
+    - sensor.yr_low_clouds
+    - sensor.yr_medium_clouds
+    - sensor.yr_precipitation
+    - sensor.yr_pressure
+    - sensor.yr_symbol
+    - sensor.yr_temperature
+    - sensor.yr_wind_direction
+    - sensor.yr_wind_speed
+
+
+flower:
+  name: Flowers
+  entities:
+    - switch.plantlight1
+    - switch.plantlight2
+    - sensor.hydro_1_battery
+    - sensor.hydro_1_conductivity
+    - sensor.hydro_1_light_intensity
+    - sensor.hydro_1_moisture
+    - sensor.hydro_1_temperature
+    - sensor.hydro_2_battery
+    - sensor.hydro_2_conductivity
+    - sensor.hydro_2_light_intensity
+    - sensor.hydro_2_moisture
+    - sensor.hydro_2_temperature
+    - sensor.window_1_battery
+    - sensor.window_1_conductivity
+    - sensor.window_1_light_intensity
+    - sensor.window_1_moisture
+    - sensor.window_1_temperature
+    - sensor.window_2_battery
+    - sensor.window_2_conductivity
+    - sensor.window_2_light_intensity
+    - sensor.window_2_moisture
+    - sensor.window_2_temperature
+    - sensor.window_3_battery
+    - sensor.window_3_conductivity
+    - sensor.window_3_light_intensity
+    - sensor.window_3_moisture
+    - sensor.window_3_temperature
+Kitchenlights:
+  name: Kitchenlights
+  entities:
+    - light.kok1
+    - light.kok2
+    - light.kok3
+
+varmskogsw:
+  name: "Varmskog switches"
+  entities:
+    - switch.uttag1
+    - switch.uttag2
+    - switch.uttag_ute
+

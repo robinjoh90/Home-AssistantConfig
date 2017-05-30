@@ -1,0 +1,93 @@
+- id: toggle_kitchenlights
+  alias: "Toggle kitchenlights"
+  trigger:
+    platform: state
+    entity_id: switch.kitchen1
+  action:
+    service_template: >
+      {% if trigger.to_state.state == 'on' %}
+        light.turn_on
+        {% else %}
+          light.turn_off
+        {% endif %}
+      entity_id: 
+        - light.kok1
+        - light.kok2
+        - light.kok3
+- id: sync_kitchenlight_switches
+  alias: "Synchronise kitchenlight switches"
+  trigger:
+    platform: state
+    entity_id: group.kitchenlights
+  action:
+    service_template: >
+      {% if trigger.to_state.state == 'on' %}
+       switch.turn_on
+      {% else %}
+        switch.turn_off
+      {% endif %}
+    entity_id: 
+      - switch.kitchen1
+- id: toggle_kitchentable_lights
+  alias: "Toggle kitchentable"
+  trigger:
+    platform: state
+    entity_id: switch.kitchen2
+  action:
+    service_template: >
+      {% if trigger.to_state.state == 'on' %}
+       light.turn_on
+      {% else %}
+        light.turn_off
+      {% endif %}
+    entity_id: 
+      - light.koksbord
+- id: toggle_bedroom_lights
+  alias: "Toggle bedroomlights"
+  trigger:
+    platform: state
+    entity_id: switch.bedroom1
+  action:
+    service_template: >
+      {% if trigger.to_state.state == 'on' %}
+       light.turn_on
+      {% else %}
+        light.turn_off
+      {% endif %}
+    entity_id: 
+      - light.sovrum1
+      - light.sovrum2
+- id: toggle_love_mode
+  alias: "Toggle some love"
+  trigger:
+    platform: state
+    entity_id: switch.bedroom2
+  action:
+    service_template: >
+      {% if trigger.to_state.state == 'on' %}
+       scene.turn_on
+      {% endif %}
+    entity_id: 
+      - scene.romantic
+- id: plant_schedule_on
+  alias: 'Plantlights on'
+  trigger:
+    platform: time
+    after: '07:00:00'
+  action:
+    service_template: >
+      switch.turn_on
+    entity_id: 
+      - switch.plantlight1
+      - switch.plantlight2
+- id: plant_schedule_on
+  alias: 'Plantlights off'
+  trigger:
+    platform: time
+    after: '22:30:00'
+  action:
+    service_template: >
+      switch.turn_off
+    entity_id: 
+      - switch.plantlight1
+      - switch.plantlight2

@@ -1,0 +1,20 @@
+- platform: arduino
+  pins:
+    7:
+      name: Relay6
+      negate: true
+    8:
+      name: Relay5
+      negate: true
+    9:
+      name: Relay4
+      negate: true
+    10:
+      name: Relay3
+      negate: true
+    11:
+      name: Relay2
+      negate: true
+    12:
+      name: Relay1
+      negate: true
