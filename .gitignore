@@ -1,0 +1,5 @@
+secrets.yaml
+known_devices.yaml
+*.conf
+.DS_Store
+rfxtrx.yaml
