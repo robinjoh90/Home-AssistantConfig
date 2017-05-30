@@ -29,7 +29,7 @@ kitchen:
   view: true
   icon: mdi:stove
   entities:
-    - sensor.sensor.outside_temperature
+    - sensor.outside_temperature
     - group.Kitchenlights
     - sensor.livingroom_temperature
     - light.koksbord
