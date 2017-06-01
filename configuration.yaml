@@ -11,6 +11,8 @@ homeassistant:
   customize_glob:
     switch.relay*:
       hidden: true
+    light.knapp*:
+      hidden: true
 
 # Enables the frontend
 frontend:
@@ -68,6 +70,19 @@ rfxtrx:
 volvooncall:
   username: !secret voc_username
   password: !secret voc_password
+
+mqtt:
+  broker: 127.0.0.1
+  port: 1883
+  client_id: home-assistant-1
+  username: !secret mqtt_username
+  password: !secret mqtt_password
+  discovery: true
+  keepalive: 60
+
+mqtt_eventstream:
+  subscribe_topic: slaves/#
+  publish_topic: master
 
 media_player:
   - platform: plex

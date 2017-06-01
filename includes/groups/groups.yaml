@@ -101,10 +101,17 @@ Kitchenlights:
     - light.kok2
     - light.kok3
 
-varmskogsw:
-  name: "Varmskog switches"
+inne:
+  name: "Main building"
   entities:
-    - switch.uttag1
-    - switch.uttag2
-    - switch.uttag_ute
+    - sensor.temperatur_inne
+    - sensor.temperatur_ute
+    - sensor.luftfuktghet_inne
+    - sensor.batteri_inne
 
+nya:
+  name: "Robins house"
+  entities:
+    - sensor.temperatur_nya_stugan
+    - sensor.luftfuktghet_nya_stugan
+    - sensor.batteri_nya_stugan

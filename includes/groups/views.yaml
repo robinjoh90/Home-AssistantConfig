@@ -49,3 +49,5 @@ Varmskog:
   entities:
     - device_tracker.volvo_neh575
     - zone.varmskog
+    - group.inne
+    - group.nya
