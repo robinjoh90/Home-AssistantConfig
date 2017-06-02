@@ -7,8 +7,49 @@ homeassistant:
   elevation: !secret home_elevation
   unit_system: metric
   time_zone: Europe/Stockholm
-  #customize: 
+  #customize:
   customize_glob:
+    "*.*":
+      custom_ui_state_card: custom-ui  
+    group.volvooncall_dashboard:
+      state_card_mode: badges
+      badges_list:
+        - binary_sensor.neh575_brake_fluid
+        - binary_sensor.neh575_bulbs
+        - binary_sensor.neh575_service
+        - binary_sensor.neh575_washer_fluid
+        - binary_sensor.neh575_doors
+        - binary_sensor.neh575_windows
+    binary_sensor.neh575_brake_fluid:
+      hidden_in:
+        - group.volvooncall_dashboard
+    binary_sensor.neh575_bulbs:
+      hidden_in:
+        - group.volvooncall_dashboard
+    binary_sensor.neh575_service:
+      hidden_in:
+        - group.volvooncall_dashboard
+    binary_sensor.neh575_washer_fluid:
+      hidden_in:
+        - group.volvooncall_dashboard
+    binary_sensor.neh575_doors:
+      hidden_in:
+        - group.volvooncall_dashboard
+    binary_sensor.neh575_windows:
+      hidden_in:
+        - group.volvooncall_dashboard
+    light.*:
+      custom_ui_state_card: custom-ui
+      state_card_mode: break-slider
+      stretch_slider: true
+      hide_control: false
+      show_last_changed: false
+      slider_theme:
+        min: 10
+        max: 255
+        pin: true
+        off_when_min: true
+        report_when_not_changed: false
     switch.relay*:
       hidden: true
     light.knapp*:

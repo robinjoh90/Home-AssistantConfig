@@ -1,0 +1,17 @@
+volvooncall_dashboard:
+  name: "Car dashboard"
+  control: hidden
+  entities:
+    - sensor.neh575_fuel
+    - sensor.neh575_fuel_2
+    - sensor.neh575_odometer
+    - sensor.neh575_range
+    - lock.neh575_lock
+    - switch.neh575_heater
+    - binary_sensor.neh575_brake_fluid
+    - binary_sensor.neh575_bulbs
+    - binary_sensor.neh575_service
+    - binary_sensor.neh575_washer_fluid
+    - binary_sensor.neh575_doors
+    - binary_sensor.neh575_windows
+    - group.volvooncall_dashboard
