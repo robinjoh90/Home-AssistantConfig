@@ -112,6 +112,11 @@ volvooncall:
   username: !secret voc_username
   password: !secret voc_password
 
+android_ip_webcam:
+  host: !secret android_cam_ip
+  username: !secret android_cam_usr
+  password: !secret android_cam_pw
+
 mqtt:
   broker: 127.0.0.1
   port: 1883
