@@ -1,19 +1,19 @@
-- id: toggle_kitchenlights
-  alias: "Toggle kitchenlights"
+- id: toggle_kitchentable_lights
+  alias: "Toggle kitchentable"
   trigger:
     platform: state
     entity_id: switch.kitchen1
   action:
     service_template: >
       {% if trigger.to_state.state == 'on' %}
-        light.turn_on
-        {% else %}
-          light.turn_off
-        {% endif %}
-      entity_id: 
-        - light.kok1
-        - light.kok2
-        - light.kok3
+       light.turn_on
+      {% else %}
+        light.turn_off
+      {% endif %}
+    entity_id: 
+      - light.kok1
+      - light.kok2
+      - light.kok3
 - id: sync_kitchenlight_switches
   alias: "Synchronise kitchenlight switches"
   trigger:
@@ -42,6 +42,7 @@
       {% endif %}
     entity_id: 
       - light.koksbord
+      - light.kok2
 - id: toggle_bedroom_lights
   alias: "Toggle bedroomlights"
   trigger:

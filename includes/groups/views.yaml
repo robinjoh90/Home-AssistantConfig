@@ -14,10 +14,14 @@ livingroom:
   entities:
     - sensor.window_1_temperature
     - group.windowlamps
-    - light.hue_iris_1
-    - light.hue_lightstrip_plus_1
     - media_player.chromecast_vardagsrum
     - remote.livingroom
+    - light.hue_iris_1
+    - light.hue_lightstrip_plus_1
+    - group.Kitchenlights
+    - light.koksbord
+    - media_player.spotify
+    - group.speakers
 plants:
   name: Plants
   view: true
@@ -33,7 +37,6 @@ kitchen:
     - group.Kitchenlights
     - sensor.livingroom_temperature
     - light.koksbord
-    - group.speakers_kitchen
 bedroom:
   name: "Bedroom"
   view: true
