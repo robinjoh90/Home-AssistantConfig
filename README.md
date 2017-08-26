@@ -1,4 +1,4 @@
-# H1 Home Assistant 
+# Home Assistant 
 Here you can find my [Home Assistant](https://home-assistant.io/) configuration files. And installation setup. 
 
 # My installation:
@@ -26,8 +26,6 @@ WantedBy=multi-user.target
 1. sudo apt-get install mosquitto
 2. sudo apt-get install mosquitto-clients
 3. sudo nano /etc/mosquitto/mosquitto.conf
-
-Create a password file
 4. sudo mosquitto_passwd -c /etc/mosquitto/pwfile mosquitto
 
 Add:
