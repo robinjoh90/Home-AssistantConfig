@@ -1,5 +1,5 @@
-- id: toggle_kitchentable_lights
-  alias: "Toggle kitchentable"
+- id: toggle_kitchenlights
+  alias: "Toggle kitchenlights"
   trigger:
     platform: state
     entity_id: switch.kitchen1
@@ -11,9 +11,9 @@
         light.turn_off
       {% endif %}
     entity_id: 
-      - light.kok1
-      - light.kok2
-      - light.kok3
+      - light.kitchen1
+      - light.kitchen2
+      - light.kitchen3
 - id: sync_kitchenlight_switches
   alias: "Synchronise kitchenlight switches"
   trigger:
@@ -41,8 +41,7 @@
         light.turn_off
       {% endif %}
     entity_id: 
-      - light.koksbord
-      - light.kok2
+      - light.table
 - id: toggle_bedroom_lights
   alias: "Toggle bedroomlights"
   trigger:
@@ -56,8 +55,8 @@
         light.turn_off
       {% endif %}
     entity_id: 
-      - light.sovrum1
-      - light.sovrum2
+      - light.bedroom1
+      - light.bedroom2
 - id: toggle_love_mode
   alias: "Toggle some love"
   trigger:
@@ -74,7 +73,7 @@
   alias: 'Plantlights on'
   trigger:
     platform: time
-    after: '07:00:00'
+    at: '07:00:00'
   action:
     service_template: >
       switch.turn_on
@@ -85,7 +84,7 @@
   alias: 'Plantlights off'
   trigger:
     platform: time
-    after: '22:30:00'
+    at: '22:30:00'
   action:
     service_template: >
       switch.turn_off

@@ -78,6 +78,8 @@ http:
   cors_allowed_origins:
     - https://google.com
     - https://home-assistant.io
+  trusted_networks: 
+    - 127.0.0.1
 
 # Checks for available updates
 updater:
@@ -109,10 +111,10 @@ notify:
 
 # Hardware
 arduino:
-  port: /dev/ttyUSB1
+  port: /dev/serial/by-id/usb-1a86_USB2.0-Serial-if00-port0
 
 rfxtrx:
-  device: /dev/ttyUSB0
+  device: /dev/serial/by-id/usb-RFXCOM_RFXtrx433_A1QC1DY-if00-port0
 
 volvooncall:
   username: !secret voc_username
@@ -124,6 +126,11 @@ volvooncall:
 #   password: !secret android_cam_pw
 #   sensors:
 #     - motion
+
+light:
+  - platform: hue
+    host: 127.0.0.1
+    filename: deconz
 
 mqtt:
   broker: 127.0.0.1
@@ -155,3 +162,6 @@ remote:
   - platform: harmony
     name: Livingroom
     host: !secret harmony_host
+
+ifttt:
+  key: !secret ifttt_api
